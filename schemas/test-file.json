@@ -1,0 +1,19 @@
+{
+    "identifiers": [{
+        "identifierType": "DOI",
+        "identifier": ":tba"
+    }],
+    "creators": [
+        {"name": "Smith, John"}
+    ],
+    "titles": [
+        {"title": "Minimal Test Case" }
+    ],
+    "publisher": "Invenio Software",
+    "publicationYear": "2015",
+    "types": {
+        "resourceType": "Dataset",
+        "resourceTypeGeneral": "Dataset"
+    },
+    "schemaVersion": "http://datacite.org/schema/kernel-4"
+}
