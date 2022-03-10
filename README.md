@@ -19,12 +19,12 @@ and then convert them to valid .xml files for Datacite metadata profile.[WIP for
 
 Run ezid_schema docker container with `--help`:
 ```
-docker run -v schemas:/workdir -it --rm sagecontinuum/ezid_schema --help
+docker run -v metadata:/workdir -it --rm sagecontinuum/ezid_schema --help
 ```
 
 Run ezid_schema docker container to convert `test-file.json` to `metadata.xml`
 ```
-docker run -v $(pwd)/schemas:/workdir/schemas --env-file=.env -it --rm sagecontinuum/ezid_schema --json_file schemas/test-file.json --xml_filename metadata.xml
+docker run -v $(pwd)/metadata:/workdir/metadata --env-file=.env -it --rm sagecontinuum/ezid_schema --json_file metadata/test-file.json --xml_filename metadata.xml
 ```
 
 ## ezid python cli usage
@@ -38,10 +38,10 @@ All the commands will prompt for a password unless password is set, EZID_USER:EZ
 
 Create a DOI for a dataset with the converted `metadata.xml` file:
 ```
-docker run -v $(pwd)/schemas:/workdir/schemas --env-file=.env -it --rm sagecontinuum/ezid $EZID_USER:$EZID_PASS mint doi:10.5072/FK2 datacite @schemas/metadata.xml
+docker run -v $(pwd)/metadata:/workdir/metadata --env-file=.env -it --rm sagecontinuum/ezid $EZID_USER:$EZID_PASS mint doi:10.5072/FK2 datacite @metadata/metadata.xml
 ```
 
 View newly created DOI:
 ```
-docker run --env-file=.env -it --rm sagecontinuum/ezid $EZID_USER:$EZID_PASS -dt view doi:10.5072/FK23R0ZM1K
+docker run --env-file=.env -it --rm sagecontinuum/ezid $EZID_USER:$EZID_PASS -dt view doi:10.5072/FK2QN67493
 ```
