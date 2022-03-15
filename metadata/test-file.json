@@ -17,16 +17,20 @@
     },
     "dates":[
         {
-            "date": "2021-01",
+            "date": "2021-01-01",
             "dateType": "Created"
         },
         {
-            "date": "2021-01",
+            "date": "2021-01-01",
             "dateType": "Available"
         },
         {
-            "date": "2022-03",
+            "date": "2022-03-16",
             "dateType": "Updated"
+        },
+        {
+            "date": "2022-01-01/2022-03-16",
+            "dateType": "Collected"
         }
     ],
     "relatedIdentifiers":[
