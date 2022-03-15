@@ -29,6 +29,13 @@
             "dateType": "Updated"
         }
     ],
+    "relatedIdentifiers":[
+        {
+            "relatedIdentifier":"https://web.lcrc.anl.gov/public/waggle/sagedata/SAGE-Data.tar",
+            "relatedIdentifierType": "URL",
+            "relationType": "Describes"
+        }
+    ],
     "fundingReferences":[{
         "funderName":"National Science Foundation",
         "funderIdentifierType": "Crossref Funder ID",
